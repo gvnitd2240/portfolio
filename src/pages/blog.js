@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowLeft, FaCalendar, FaUser, FaBars, FaTimes, FaPen, FaBook, FaRss, FaGithub, FaLinkedin, FaCode, FaDatabase, FaTools, FaEnvelope } from "react-icons/fa";
+import Link from "next/link";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,17 +28,17 @@ function Header() {
     }`}>
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">
+          <Link href="/" className="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">
             Vivek Garg
-          </a>
+          </Link>
           
           {/* Desktop Navigation - Hidden on mobile */}
           <div className="hidden xl:flex space-x-8">
-            <a href="/#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-            <a href="/#experience" className="text-gray-700 hover:text-blue-600 transition-colors">Experience</a>
-            <a href="/#skills" className="text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
-            <a href="/blog" className="text-blue-600 font-semibold">Blog</a>
-            <a href="/#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            <Link href="/#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
+            <Link href="/#experience" className="text-gray-700 hover:text-blue-600 transition-colors">Experience</Link>
+            <Link href="/#skills" className="text-gray-700 hover:text-blue-600 transition-colors">Skills</Link>
+            <Link href="/blog" className="text-blue-600 font-semibold">Blog</Link>
+            <Link href="/#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
           </div>
 
           {/* Mobile Menu Button - Always visible on mobile/tablet */}
@@ -56,41 +57,41 @@ function Header() {
         {isMobileMenuOpen && (
           <div className="xl:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200">
             <div className="px-6 py-4 space-y-0">
-              <a 
+              <Link 
                 href="/#about" 
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 border-b border-gray-100 hover:bg-gray-50 rounded-lg px-2"
               >
                 About
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/#experience" 
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 border-b border-gray-100 hover:bg-gray-50 rounded-lg px-2"
               >
                 Experience
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/#skills" 
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 border-b border-gray-100 hover:bg-gray-50 rounded-lg px-2"
               >
                 Skills
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/blog" 
                 onClick={closeMobileMenu}
                 className="block text-blue-600 font-semibold py-3 border-b border-gray-100 hover:bg-gray-50 rounded-lg px-2"
               >
                 Blog
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/#contact" 
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 hover:bg-gray-50 rounded-lg px-2"
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         )}
@@ -104,13 +105,13 @@ function BlogHero() {
     <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <a 
+          <Link 
             href="/" 
             className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 mb-8 transition-colors"
           >
             <FaArrowLeft />
             <span>Back to Portfolio</span>
-          </a>
+          </Link>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Blogs
           </h1>
@@ -190,13 +191,13 @@ function EmptyState() {
         {/* Call to Action */}
         <div className="space-y-6">
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a
+            <Link
               href="/#contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
             >
               <FaEnvelope />
               <span>Get in Touch</span>
-            </a>
+            </Link>
             <a
               href="https://github.com/gvnitd2240"
               target="_blank"

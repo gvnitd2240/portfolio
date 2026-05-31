@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaDownload, FaCode, FaDatabase, FaTools, FaUsers, FaChartLine, FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,19 +23,18 @@ function Header() {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      }`}>
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold gradient-text">Vivek Garg</h1>
-          
+
           {/* Desktop Navigation - Hidden on mobile */}
           <div className="hidden xl:flex space-x-8">
             <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
             <a href="#experience" className="text-gray-700 hover:text-blue-600 transition-colors">Experience</a>
             <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
-            <a href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</a>
+            <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
           </div>
 
@@ -54,36 +54,36 @@ function Header() {
         {isMobileMenuOpen && (
           <div className="xl:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200">
             <div className="px-6 py-4 space-y-0">
-              <a 
-                href="#about" 
+              <a
+                href="#about"
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 border-b border-gray-100 hover:bg-gray-50 rounded-lg px-2"
               >
                 About
               </a>
-              <a 
-                href="#experience" 
+              <a
+                href="#experience"
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 border-b border-gray-100 hover:bg-gray-50 rounded-lg px-2"
               >
                 Experience
               </a>
-              <a 
-                href="#skills" 
+              <a
+                href="#skills"
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 border-b border-gray-100 hover:bg-gray-50 rounded-lg px-2"
               >
                 Skills
               </a>
-              <a 
-                href="/blog" 
+              <Link
+                href="/blog"
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 border-b border-gray-100 hover:bg-gray-50 rounded-lg px-2"
               >
                 Blog
-              </a>
-              <a 
-                href="#contact" 
+              </Link>
+              <a
+                href="#contact"
                 onClick={closeMobileMenu}
                 className="block text-gray-700 hover:text-blue-600 transition-colors py-3 hover:bg-gray-50 rounded-lg px-2"
               >
@@ -113,15 +113,15 @@ function HeroSection() {
             Software Engineer
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Passionate software engineer with expertise in microservices architecture, 
-            API integrations, and full-stack development. Transforming ideas into scalable solutions.
+            Passionate software engineer with expertise in microservices architecture,
+            high-volume integrations, and automated developer tooling. Transforming complex problems into scalable systems.
           </p>
         </div>
-        
-        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+
+        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <div className="flex items-center space-x-2 text-gray-600">
             <FaMapMarkerAlt className="text-blue-500" />
-            <span className="text-sm sm:text-base">Gurugram, Haryana</span>
+            <span className="text-sm sm:text-base">Chennai, India</span>
           </div>
           <div className="flex items-center space-x-2 text-gray-600">
             <FaPhone className="text-blue-500" />
@@ -133,7 +133,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <a
             href="https://linkedin.com"
             target="_blank"
@@ -153,7 +153,7 @@ function HeroSection() {
             <span>GitHub</span>
           </a>
           <a
-            href="https://drive.google.com/file/d/17778y5y8OR7Ts4N3EuXajV2Lk_aMdFGn/view"
+            href="https://drive.google.com/file/d/1fcpH-uNgPSFV7vdQEbWTagBI9fYq3UDy/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 transform hover:scale-105"
@@ -195,7 +195,7 @@ function AboutSection() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className={isVisible ? 'animate-fade-in-left' : ''}>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Education</h3>
@@ -208,18 +208,18 @@ function AboutSection() {
               <p className="text-gray-600 text-sm mt-2">Jul 2018 – Jun 2022 • Durgapur, West Bengal</p>
             </div>
           </div>
-          
+
           <div className={isVisible ? 'animate-fade-in-right' : ''}>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Professional Summary</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              I'm a passionate Software Engineer with extensive experience in building scalable microservices 
-              and integrating complex APIs. My expertise spans across multiple technologies including Kotlin, 
-              Python, React, and various cloud services.
+              I'm a passionate Software Engineer currently working at Amazon, where I design automated
+              developer tooling, build browser extensions that reduce massive manual overhead, and contribute
+              to international marketplace launches.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              I specialize in optimizing system performance, reducing response times by up to 50%, and 
-              implementing solutions that handle millions of daily tasks. My work has consistently resulted 
-              in significant improvements in efficiency, revenue growth, and user satisfaction.
+              Previously, at Cogoport, I architected event-driven microservices handling millions of daily events,
+              integrated complex financial/banking APIs, and built tools that directly enhanced auditing speed and business revenue.
+              My expertise includes Kotlin, Micronaut, React, and message brokers.
             </p>
           </div>
         </div>
@@ -251,46 +251,66 @@ function ExperienceSection() {
 
   const experiences = [
     {
+      company: "Amazon",
+      position: "Software Engineer",
+      duration: "Nov 2024 – Present",
+      location: "Chennai, India",
+      achievements: [
+        {
+          title: "LinkTree WebExtension",
+          description: "Developed a JavaScript browser extension using Web Extension APIs to enable seamless cross-domain navigation across Amazon Marketplaces, reducing engineering overhead by ~437 hours."
+        },
+        {
+          title: "CR Creation Automation Tool",
+          description: "Automated standardized code review generation using native Amazon Coral services and parallel processing, reducing review cycles by 30%."
+        },
+        {
+          title: "HARP Launch (Ireland Expansion)",
+          description: "Extended backend microservices and packages in collaboration with Customer Experience teams for the Ireland Amazon Marketplace launch."
+        }
+      ]
+    },
+    {
       company: "Cogoport Private Limited",
       position: "Software Engineer",
-      duration: "Jan. 2022 – Present",
+      duration: "Jan 2022 – Nov 2024",
       location: "Gurugram, Haryana",
       achievements: [
         {
-          title: "Asynchronous Messaging Optimization",
-          description: "Spearheaded RabbitMQ integration within microservices architecture, achieving 50% decrease in response times and managing 1 million daily tasks with unparalleled resilience."
+          title: "Microservices Architecture & Messaging",
+          description: "Integrated RabbitMQ in Kotlin/Micronaut microservices for event-driven workflows, implementing dead-letter queues and reducing latency by 50% while handling 1M+ daily events."
         },
         {
-          title: "Sage API Integration",
-          description: "Orchestrated seamless integration of accounting data (Invoices, Journal Vouchers, Payments, TDS, Settlements), resulting in 20% enhancement in data accuracy and 15% reduction in processing time."
+          title: "Financial Data Integration (Sage API)",
+          description: "Led OAuth2 REST API integrations for financial data (Invoices, JVs, TDS) using Micronaut, improving data accuracy by 20% and reducing processing time by 15%."
         },
         {
-          title: "Bank Integration",
-          description: "Integrated bank services into Accounts Receivables, achieving 20% reduction in payment processing time and fostering revenue growth."
+          title: "Banking Systems Integration",
+          description: "Built secure payment processing services using Java and Spring Boot to integrate banking APIs, ensuring PCI DSS compliance and reducing processing time by 20%."
         },
         {
-          title: "Stripe Integration",
-          description: "Minimized accounts payable management time by 40%, leading to 15% increase in quarterly revenue and 20% expansion of customer base."
+          title: "Stripe Payment Automation",
+          description: "Automated Accounts Payable workflows via Stripe using Kotlin and Micronaut, decreasing operational overhead by 40% and driving 15% quarterly revenue growth."
         },
         {
-          title: "Campaign Management Tool",
-          description: "Developed user-friendly front-end with React Flow Renderer, contributing to 30% increase in customer acquisition through targeted e-commerce emails."
+          title: "Campaign Management Tool Frontend",
+          description: "Developed a React-based visual workflow dashboard using React Flow Renderer and GraphQL, boosting user engagement by 30%."
         },
         {
-          title: "Template Generating System",
-          description: "Streamlined email template creation with Bee Free integration, boosting email marketing effectiveness with 15% increase in engagement and conversion rates."
+          title: "Template Generation Microservice",
+          description: "Created an email template microservice integrating the Bee Free editor with versioning and rollbacks, accelerating campaign turnaround by 15%."
         },
         {
-          title: "In-house Lead Source: Athena",
-          description: "Built robust data ingestion system using Uvicorn, Peewee, and FastApi, achieving 25% increase in lead generation efficiency."
+          title: "Data Ingestion Pipeline (Athena)",
+          description: "Built a high-volume ETL pipeline using FastAPI and Peewee ORM with Prometheus monitoring, raising lead generation efficiency by 25%."
         },
         {
-          title: "Financial Data Management",
-          description: "Implemented strategic enhancements achieving 68% reduction in Turnaround Time (TAT) and 35% shorter auditing time."
+          title: "Financial Operations Optimization",
+          description: "Optimized database indexing and queries in PostgreSQL/OpenSearch for financial audits, reducing Turnaround Time (TAT) by 68% and audit durations by 35%."
         },
         {
-          title: "Account Receivables and Payables Dashboard",
-          description: "Provided real-time insights through advanced data management, achieving 25% improvement in dashboard performance and 30% reduction in processing time."
+          title: "Real-time Financial Dashboards",
+          description: "Built real-time Accounts Receivables/Payables dashboards using RabbitMQ and OpenSearch caching, improving load times by 25% and insight generation by 30%."
         }
       ]
     }
@@ -303,21 +323,21 @@ function ExperienceSection() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional Experience</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
-        
-        <div className="space-y-8">
+
+        <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className={`bg-white rounded-lg shadow-lg p-8 border-l-4 border-blue-600 hover-lift ${isVisible ? 'animate-fade-in-up' : ''}`} style={{animationDelay: `${index * 0.1}s`}}>
+            <div key={index} className={`bg-white rounded-lg shadow-lg p-8 border-l-4 border-blue-600 hover-lift ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">{exp.company}</h3>
                   <p className="text-xl text-blue-600 font-semibold">{exp.position}</p>
                 </div>
-                <div className="text-right mt-4 md:mt-0">
-                  <p className="text-gray-600">{exp.duration}</p>
+                <div className="text-left md:text-right mt-4 md:mt-0">
+                  <p className="text-gray-600 font-medium">{exp.duration}</p>
                   <p className="text-gray-500">{exp.location}</p>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {exp.achievements.map((achievement, idx) => (
                   <div key={idx} className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg hover:shadow-md transition-shadow">
@@ -359,17 +379,17 @@ function SkillsSection() {
     {
       title: "Programming Languages",
       icon: <FaCode className="text-3xl text-blue-600" />,
-      skills: ["Kotlin", "Python", "SQL", "JavaScript", "Java"]
+      skills: ["Kotlin", "SQL", "Java"]
     },
     {
       title: "Frameworks & Libraries",
       icon: <FaCode className="text-3xl text-purple-600" />,
-      skills: ["Micronaut", "FastAPI", "React", "Spring Boot"]
+      skills: ["Micronaut", "Spring Boot"]
     },
     {
       title: "Databases & Search",
       icon: <FaDatabase className="text-3xl text-green-600" />,
-      skills: ["PostgreSQL", "Elastic Search", "Firebase", "Opensearch"]
+      skills: ["PostgreSQL", "Firebase", "Opensearch", "Redis"]
     },
     {
       title: "Message Brokers",
@@ -379,12 +399,7 @@ function SkillsSection() {
     {
       title: "Development Tools",
       icon: <FaTools className="text-3xl text-red-600" />,
-      skills: ["IntelliJ IDEA", "VS Code", "Table Plus", "Docker", "GIT", "JIRA", "Postman", "Excel"]
-    },
-    {
-      title: "Soft Skills",
-      icon: <FaUsers className="text-3xl text-indigo-600" />,
-      skills: ["Effective Team Coordination", "Leadership", "Clear Communication", "Problem Solving"]
+      skills: ["Docker", "GIT"]
     }
   ];
 
@@ -395,10 +410,10 @@ function SkillsSection() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <div key={index} className={`bg-gradient-to-br from-gray-50 to-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 ${isVisible ? 'animate-fade-in-up' : ''}`} style={{animationDelay: `${index * 0.1}s`}}>
+            <div key={index} className={`bg-gradient-to-br from-gray-50 to-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex items-center mb-6">
                 {category.icon}
                 <h3 className="text-xl font-semibold text-gray-900 ml-4">{category.title}</h3>
@@ -449,7 +464,7 @@ function ContactSection() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className={isVisible ? 'animate-fade-in-left' : ''}>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
@@ -463,7 +478,7 @@ function ContactSection() {
                   <p className="text-gray-900 font-semibold">vgarg7900@gmail.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                   <FaPhone className="text-white" />
@@ -473,19 +488,19 @@ function ContactSection() {
                   <p className="text-gray-900 font-semibold">9649756632</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
                   <FaMapMarkerAlt className="text-white" />
                 </div>
                 <div>
                   <p className="text-gray-600">Location</p>
-                  <p className="text-gray-900 font-semibold">Gurugram, Haryana</p>
+                  <p className="text-gray-900 font-semibold">Noida, India</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className={isVisible ? 'animate-fade-in-right' : ''}>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Connect With Me</h3>
             <div className="space-y-4">
@@ -498,7 +513,7 @@ function ContactSection() {
                 <FaLinkedin className="text-blue-600 text-2xl" />
                 <span className="text-gray-900 font-semibold">LinkedIn Profile</span>
               </a>
-              
+
               <a
                 href="https://github.com/gvnitd2240"
                 target="_blank"
@@ -520,7 +535,7 @@ function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <p>&copy; 2025 Vivek Garg. All rights reserved.</p>
+        <p>&copy; 2026 Vivek Garg. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -121,7 +121,7 @@ function HeroSection() {
         <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <div className="flex items-center space-x-2 text-gray-600">
             <FaMapMarkerAlt className="text-blue-500" />
-            <span className="text-sm sm:text-base">Chennai, India</span>
+            <span className="text-sm sm:text-base">Noida, India</span>
           </div>
           <div className="flex items-center space-x-2 text-gray-600">
             <FaPhone className="text-blue-500" />
@@ -253,7 +253,7 @@ function ExperienceSection() {
     {
       company: "Amazon",
       position: "Software Engineer",
-      duration: "Nov 2024 – Present",
+      duration: "Nov 2024 – Mar 2026",
       location: "Chennai, India",
       achievements: [
         {

@@ -153,7 +153,7 @@ function HeroSection() {
             <span>GitHub</span>
           </a>
           <a
-            href="https://drive.google.com/file/d/1fcpH-uNgPSFV7vdQEbWTagBI9fYq3UDy/view?usp=sharing"
+            href="https://drive.google.com/file/d/1-W5ATRCZvahD8LvmRcZ8NVD0D1dKydM5/view"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 transform hover:scale-105"
